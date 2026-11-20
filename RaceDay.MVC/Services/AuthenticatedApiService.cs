@@ -58,4 +58,33 @@ public class AuthenticatedApiService
         request.Headers.TryAddWithoutValidation(
             "Cookie", cookie);
     }
+
+    public async Task<HttpResponseMessage> PutAsync<T>(
+        string endpoint, T data)
+    {
+        var client = _factory.CreateClient("RaceDayAPI");
+
+        using var request = new HttpRequestMessage(
+            HttpMethod.Put, endpoint);
+
+        request.Content = JsonContent.Create(data);
+
+        AddAuthentication(request);
+
+        return await client.SendAsync(request);
+    }
+
+    public async Task<HttpResponseMessage> DeleteAsync(
+        string endpoint)
+    {
+        var client = _factory.CreateClient("RaceDayAPI");
+
+        using var request = new HttpRequestMessage(
+            HttpMethod.Delete, endpoint);
+
+        AddAuthentication(request);
+
+        return await client.SendAsync(request);
+    }
+
 }

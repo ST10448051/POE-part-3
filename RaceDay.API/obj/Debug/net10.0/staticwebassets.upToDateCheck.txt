@@ -1,0 +1,2 @@
+wwwroot\swagger\csrf.js
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\wwwroot\swagger\csrf.js

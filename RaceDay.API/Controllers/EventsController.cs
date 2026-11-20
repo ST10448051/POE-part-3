@@ -208,6 +208,40 @@ public class EventsController : ControllerBase
         return NoContent();
     }
 
+    /// <summary>
+    /// Retrieves events owned by the logged-in Organiser.
+    /// </summary>
+    [HttpGet("mine")]
+    [Authorize(Roles = "Organiser")]
+    public async Task<IActionResult> GetMyEvents()
+    {
+        var userIdValue = User.FindFirstValue(
+            ClaimTypes.NameIdentifier);
 
+        if (!int.TryParse(userIdValue, out var organiserId))
+        {
+            return Unauthorized();
+        }
+
+        var events = await _context.Events
+            .AsNoTracking()
+            .Where(e => e.OrganiserID == organiserId)
+            .OrderByDescending(e => e.EventDate)
+            .Select(e => new
+            {
+                e.EventID,
+                e.EventName,
+                e.Description,
+                e.EventDate,
+                e.Location,
+                e.DistanceKm,
+                e.EntryFee,
+                e.Status,
+                e.EventType
+            })
+            .ToListAsync();
+
+        return Ok(events);
+    }
 
 }

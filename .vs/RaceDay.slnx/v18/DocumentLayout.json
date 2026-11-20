@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|c:\\users\\luke cowley\\documents\\github\\prog6212\\raceday.mvc\\views\\organiser\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|solutionrelative:raceday.mvc\\views\\organiser\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|c:\\users\\luke cowley\\documents\\github\\prog6212\\raceday.mvc\\controllers\\organisercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|solutionrelative:raceday.mvc\\controllers\\organisercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\luke cowley\\documents\\github\\prog6212\\raceday.api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|c:\\users\\luke cowley\\documents\\github\\prog6212\\raceday.mvc\\views\\events\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|solutionrelative:raceday.mvc\\views\\events\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -19,20 +31,12 @@
       "RelativeMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|solutionrelative:raceday.mvc\\services\\authenticatedapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|c:\\users\\luke cowley\\documents\\github\\prog6212\\raceday.mvc\\views\\organiser\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|solutionrelative:raceday.mvc\\views\\organiser\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|c:\\users\\luke cowley\\documents\\github\\prog6212\\raceday.mvc\\views\\events\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|solutionrelative:raceday.mvc\\views\\events\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|c:\\users\\luke cowley\\documents\\github\\prog6212\\raceday.mvc\\models\\eventformviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|solutionrelative:raceday.mvc\\models\\eventformviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|c:\\users\\luke cowley\\documents\\github\\prog6212\\raceday.api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48D9D8E2-607E-794F-661B-67674A1416B8}|RaceDay.API\\RaceDay.API.csproj|solutionrelative:raceday.api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|c:\\users\\luke cowley\\documents\\github\\prog6212\\raceday.mvc\\views\\events\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -99,10 +103,6 @@
       "RelativeMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|solutionrelative:raceday.mvc\\views\\participant\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|c:\\users\\luke cowley\\documents\\github\\prog6212\\raceday.mvc\\controllers\\organisercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|solutionrelative:raceday.mvc\\controllers\\organisercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|c:\\users\\luke cowley\\documents\\github\\prog6212\\raceday.mvc\\models\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6E30AEB-0C8E-45EC-9D31-037E37D5E355}|RaceDay.MVC\\RaceDay.MVC.csproj|solutionrelative:raceday.mvc\\models\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -146,7 +146,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -154,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Events\\Delete.cshtml",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Views\\Events\\Delete.cshtml",
@@ -168,34 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Events\\Edit.cshtml",
-              "RelativeDocumentMoniker": "RaceDay.MVC\\Views\\Events\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Events\\Edit.cshtml",
-              "RelativeToolTip": "RaceDay.MVC\\Views\\Events\\Edit.cshtml",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAmwKMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-20T09:15:59.321Z",
-              "EditorCaption": "",
-              "OwnerCaption": "%2"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Events\\Create.cshtml",
-              "RelativeDocumentMoniker": "RaceDay.MVC\\Views\\Events\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Events\\Create.cshtml",
-              "RelativeToolTip": "RaceDay.MVC\\Views\\Events\\Create.cshtml",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAkwKEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-20T09:07:52.716Z",
-              "OwnerCaption": "%2"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "EventFormViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Models\\EventFormViewModel.cs",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Models\\EventFormViewModel.cs",
@@ -208,20 +181,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "EventsController.cs",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.API\\Controllers\\EventsController.cs",
               "RelativeDocumentMoniker": "RaceDay.API\\Controllers\\EventsController.cs",
               "ToolTip": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.API\\Controllers\\EventsController.cs",
               "RelativeToolTip": "RaceDay.API\\Controllers\\EventsController.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAAANUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMwAAAAAZGZmZmb0v/UAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-20T08:57:53.35Z",
+              "EditorCaption": "",
               "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Events\\Details.cshtml",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Views\\Events\\Details.cshtml",
@@ -234,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Events\\Index.cshtml",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Views\\Events\\Index.cshtml",
@@ -247,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "EventsController.cs",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Controllers\\EventsController.cs",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Controllers\\EventsController.cs",
@@ -256,12 +230,11 @@
               "ViewState": "AgIAACMBAAAAAAAAAAAYwDkBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-20T08:44:19.941Z",
-              "EditorCaption": "",
               "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "EventViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Models\\EventViewModel.cs",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Models\\EventViewModel.cs",
@@ -274,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "AuthenticatedApiService.cs",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Services\\AuthenticatedApiService.cs",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Services\\AuthenticatedApiService.cs",
@@ -283,12 +256,11 @@
               "ViewState": "AgIAACsAAAAAAAAAAAAuwFcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-20T08:38:21.854Z",
-              "EditorCaption": "",
               "OwnerCaption": "%2"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "ApiSessionService.cs",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Services\\ApiSessionService.cs",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Services\\ApiSessionService.cs",
@@ -301,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Views\\Home\\Index.cshtml",
@@ -314,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "RaceDay.MVC\\wwwroot\\css\\site.css",
@@ -327,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Views\\Shared\\_Layout.cshtml",
@@ -340,7 +312,61 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 1,
+              "Title": "OrganiserController.cs",
+              "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Controllers\\OrganiserController.cs",
+              "RelativeDocumentMoniker": "RaceDay.MVC\\Controllers\\OrganiserController.cs",
+              "ToolTip": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Controllers\\OrganiserController.cs",
+              "RelativeToolTip": "RaceDay.MVC\\Controllers\\OrganiserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-20T06:55:24.604Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Organiser\\Index.cshtml",
+              "RelativeDocumentMoniker": "RaceDay.MVC\\Views\\Organiser\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Organiser\\Index.cshtml",
+              "RelativeToolTip": "RaceDay.MVC\\Views\\Organiser\\Index.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAmwK4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-20T06:56:54.814Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Events\\Create.cshtml",
+              "RelativeDocumentMoniker": "RaceDay.MVC\\Views\\Events\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Events\\Create.cshtml",
+              "RelativeToolTip": "RaceDay.MVC\\Views\\Events\\Create.cshtml",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAkwKEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-20T09:07:52.716Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Events\\Edit.cshtml",
+              "RelativeDocumentMoniker": "RaceDay.MVC\\Views\\Events\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Events\\Edit.cshtml",
+              "RelativeToolTip": "RaceDay.MVC\\Views\\Events\\Edit.cshtml",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAmwKMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-20T09:15:59.321Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Views\\Account\\Register.cshtml",
@@ -353,21 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Organiser\\Index.cshtml",
-              "RelativeDocumentMoniker": "RaceDay.MVC\\Views\\Organiser\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Organiser\\Index.cshtml",
-              "RelativeToolTip": "RaceDay.MVC\\Views\\Organiser\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAANDMzMzPbvxYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-20T06:56:54.814Z",
-              "EditorCaption": "",
-              "OwnerCaption": "%2"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.API\\appsettings.json",
               "RelativeDocumentMoniker": "RaceDay.API\\appsettings.json",
@@ -380,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Models\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Models\\RegisterViewModel.cs",
@@ -393,7 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "AccessDenied.cshtml",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Account\\AccessDenied.cshtml",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Views\\Account\\AccessDenied.cshtml",
@@ -406,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Participant\\Index.cshtml",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Views\\Participant\\Index.cshtml",
@@ -419,7 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ParticipantController.cs",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Controllers\\ParticipantController.cs",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Controllers\\ParticipantController.cs",
@@ -432,20 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "OrganiserController.cs",
-              "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Controllers\\OrganiserController.cs",
-              "RelativeDocumentMoniker": "RaceDay.MVC\\Controllers\\OrganiserController.cs",
-              "ToolTip": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Controllers\\OrganiserController.cs",
-              "RelativeToolTip": "RaceDay.MVC\\Controllers\\OrganiserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-20T06:55:24.604Z",
-              "OwnerCaption": "%2"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Controllers\\AccountController.cs",
@@ -458,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Program.cs",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Program.cs",
@@ -497,7 +496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Luke Cowley\\Documents\\GitHub\\Prog6212\\RaceDay.MVC\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "RaceDay.MVC\\Views\\Account\\Login.cshtml",

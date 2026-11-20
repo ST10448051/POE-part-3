@@ -1,8 +1,127 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+
+                <span class="hero-label">
+                    YOUR RACE STARTS HERE
+                </span>
+
+                <h1 class="hero-title">
+                    Every Race.
+                    <span>Every Finish Line.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover exciting running events,
+                    register for your next challenge,
+                    and track your racing achievements.
+                    All in one place.
+                </p>
+
+                <div class="d-flex gap-3 flex-wrap">
+
+                    <a asp-controller="Events"
+                       asp-action="Index"
+                       class="btn btn-raceday btn-lg">
+                        Explore Events
+                    </a>
+
+                    @if (User.Identity?.IsAuthenticated != true)
+                    {
+                        <a asp-controller="Account"
+                           asp-action="Register"
+                           class="btn btn-outline-light btn-lg">
+                            Join RaceDay
+                        </a>
+                    }
+                    else if (User.IsInRole("Organiser"))
+                    {
+                        <a asp-controller="Organiser"
+                           asp-action="Index"
+                           class="btn btn-outline-light btn-lg">
+                            My Dashboard
+                        </a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Participant"
+                           asp-action="Index"
+                           class="btn btn-outline-light btn-lg">
+                            My Dashboard
+                        </a>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">
+                Everything You Need to Race
+            </h2>
+
+            <p class="text-muted">
+                From registration to the finish line.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">🏃</div>
+
+                        <h4>Discover Events</h4>
+
+                        <p class="text-muted">
+                            Find upcoming races and
+                            choose your next challenge.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">🏅</div>
+
+                        <h4>Track Your Results</h4>
+
+                        <p class="text-muted">
+                            View your race history,
+                            finishing times and positions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">📅</div>
+
+                        <h4>Manage Events</h4>
+
+                        <p class="text-muted">
+                            Organise races, manage
+                            enrolments and publish results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

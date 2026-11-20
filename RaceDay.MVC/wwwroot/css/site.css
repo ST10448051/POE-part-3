@@ -113,3 +113,81 @@ body {
         padding-bottom: 2rem;
     }
 }
+
+
+/* RaceDay Home Page */
+
+.hero-section {
+    background: linear-gradient( 135deg, #142238 0%, #243b59 100% );
+    color: white;
+    padding: 110px 0;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-label {
+    color: #fb923c;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 25px 0;
+}
+
+    .hero-title span {
+        display: block;
+        color: #f97316;
+    }
+
+.hero-description {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    max-width: 650px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.features-section {
+    padding: 80px 0;
+}
+
+.feature-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.feature-card h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 70px 0;
+        min-height: auto;
+    }
+
+    .features-section {
+        padding: 50px 0;
+    }
+}
+ 

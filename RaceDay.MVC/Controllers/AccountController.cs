@@ -1,4 +1,4 @@
-﻿
+﻿using RaceDay.MVC.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -135,6 +135,32 @@ public class AccountController : Controller
 
             var principal = new ClaimsPrincipal(identity);
 
+            if (!response.Headers.TryGetValues(
+                    "Set-Cookie", out var cookies))
+            {
+                ModelState.AddModelError("",
+                    "The API did not create an authentication session.");
+
+                return View(model);
+            }
+
+            var authCookie = cookies
+                .SelectMany(c => c.Split(';', 2))
+                .FirstOrDefault(c =>
+                    c.TrimStart().StartsWith(
+                        "RaceDay.Auth=",
+                        StringComparison.Ordinal));
+
+            if (string.IsNullOrWhiteSpace(authCookie))
+            {
+                ModelState.AddModelError("",
+                    "The API authentication cookie was not found.");
+
+                return View(model);
+            }
+
+            _apiSession.SetApiCookie(authCookie.Trim());
+
             await HttpContext.SignInAsync(
                 CookieAuthenticationDefaults
                     .AuthenticationScheme,
@@ -160,6 +186,7 @@ public class AccountController : Controller
             CookieAuthenticationDefaults
                 .AuthenticationScheme);
 
+        _apiSession.Clear();
         HttpContext.Session.Clear();
 
         return RedirectToAction("Login", "Account");
@@ -254,6 +281,14 @@ public class AccountController : Controller
             return View(model);
         }
     }
+    private readonly ApiSessionService _apiSession;
 
+    public AccountController(
+        IHttpClientFactory httpClientFactory,
+        ApiSessionService apiSession)
+    {
+        _httpClientFactory = httpClientFactory;
+        _apiSession = apiSession;
+    }
 
 }

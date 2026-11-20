@@ -24,6 +24,9 @@ builder.Services.AddHttpClient("RaceDayAPI", client =>
 builder.Services.AddScoped<
     RaceDay.MVC.Services.RaceDayApiService>();
 
+builder.Services.AddScoped<
+    RaceDay.MVC.Services.AuthenticatedApiService>();
+
 // Session support
 builder.Services.AddDistributedMemoryCache();
 
@@ -61,6 +64,10 @@ builder.Services
 
 builder.Services.AddAuthorization();
 
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddScoped<
+    RaceDay.MVC.Services.ApiSessionService>();
 
 var app = builder.Build();
 

@@ -141,9 +141,11 @@ public class AuthController : ControllerBase
 
         var principal = new ClaimsPrincipal(identity);
 
-        await HttpContext.SignInAsync(
-            CookieAuthenticationDefaults.AuthenticationScheme,
-            principal);
+        var apiCookie = Response.Headers.SetCookie
+            .ToString()
+            .Split('\n')
+            .FirstOrDefault(value =>
+                value.Contains("RaceDay.Auth="));
 
         return Ok(new
         {

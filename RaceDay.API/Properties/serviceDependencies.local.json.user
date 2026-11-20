@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2026-11-20T12:51:23.7210991Z"
+    },
+    "storage1": {
+      "restored": false,
+      "restoreTime": "2026-11-20T13:08:44.4013359Z"
+    }
+  },
+  "parameters": {
+    "storage1.serviceConnectorResourceGroupName": {
+      "Name": "storage1.serviceConnectorResourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "rg-raceday"
+    },
+    "storage1.resourceGroupName": {
+      "Name": "storage1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "rg-raceday"
+    },
+    "storage1.subscriptionId": {
+      "Name": "storage1.subscriptionId",
+      "Type": "subscription",
+      "Value": "1fc26761-4765-4fc8-8501-3ad5eceb383a"
+    },
+    "storage1.resourceGroupLocation": {
+      "Name": "storage1.resourceGroupLocation",
+      "Type": "location",
+      "Value": "southafricanorth"
+    }
+  }
+}

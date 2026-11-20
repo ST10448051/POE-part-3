@@ -339,7 +339,6 @@ C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\obj\Debug\net10.0\jsm
 C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\obj\Debug\net10.0\scopedcss\scopedcss.cache
 C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\obj\Debug\net10.0\scopedcss\bundle\RaceDay.API.styles.css
 C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\obj\Debug\net10.0\compressed\3svdz75w6d-{0}-tchfgznwy8-tchfgznwy8.gz
-C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\obj\Debug\net10.0\compressed\1bu6i6kizw-{0}-lc4753avin-lc4753avin.gz
 C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\obj\Debug\net10.0\compressed\rvyoz3ced2-{0}-4xccxsu51s-4xccxsu51s.gz
 C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\obj\Debug\net10.0\compressed\nccdgpawci-{0}-v1vy2to33n-v1vy2to33n.gz
 C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\obj\Debug\net10.0\compressed\ngsjqvnxki-{0}-ysew0n4kjn-ysew0n4kjn.gz
@@ -355,3 +354,12 @@ C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\obj\Debug\net10.0\ref
 C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\obj\Debug\net10.0\RaceDay.API.pdb
 C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\obj\Debug\net10.0\RaceDay.API.genruntimeconfig.cache
 C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\obj\Debug\net10.0\ref\RaceDay.API.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\bin\Debug\net10.0\Apache.Arrow.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\bin\Debug\net10.0\Azure.Data.Tables.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\bin\Debug\net10.0\Azure.Storage.Blobs.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\bin\Debug\net10.0\Azure.Storage.Common.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\bin\Debug\net10.0\Azure.Storage.Files.Shares.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\bin\Debug\net10.0\Azure.Storage.Queues.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\bin\Debug\net10.0\Microsoft.Extensions.Azure.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\bin\Debug\net10.0\System.IO.Hashing.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API\obj\Debug\net10.0\compressed\1bu6i6kizw-{0}-htxovmbcoy-htxovmbcoy.gz

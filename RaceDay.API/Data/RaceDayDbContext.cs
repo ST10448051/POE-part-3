@@ -103,6 +103,33 @@ public class RaceDayDbContext : DbContext
                 .HasConstraintName("FK_Events_Organiser");
         });
 
+        modelBuilder.Entity<EventMedia>(entity =>
+        {
+            entity.HasKey(e => e.EventMediaID);
+
+            entity.Property(e => e.BlobName)
+                .IsRequired()
+                .HasMaxLength(255);
+
+            entity.Property(e => e.FileName)
+                .IsRequired()
+                .HasMaxLength(255);
+
+            entity.Property(e => e.ContentType)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            entity.Property(e => e.UploadedAt)
+                .HasDefaultValueSql("GETUTCDATE()");
+
+            entity.HasIndex(e => e.BlobName)
+                .IsUnique();
+
+            entity.HasOne(e => e.Event)
+                .WithMany(e => e.EventMedia)
+                .HasForeignKey(e => e.EventID)
+                .OnDelete(DeleteBehavior.Cascade);
+        });
 
         modelBuilder.Entity<Category>(e =>
         {
@@ -257,4 +284,8 @@ public class RaceDayDbContext : DbContext
                 .HasConstraintName("FK_WeatherReports_Event");
         });
     }
+
+    public DbSet<EventMedia> EventMedia { get; set; }
+    = null!;
+
 }

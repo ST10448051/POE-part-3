@@ -32,6 +32,8 @@ public class Event
     public ICollection<EventCategory> EventCategories { get; set; } = new List<EventCategory>();
     public Route? Route { get; set; }
     public ICollection<WeatherReport> WeatherReports { get; set; } = new List<WeatherReport>();
+    public ICollection<EventMedia> EventMedia { get; set; }
+    = new List<EventMedia>();
 }
 
 public class Category

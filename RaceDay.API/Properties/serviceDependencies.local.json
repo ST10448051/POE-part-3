@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets.user"
+    },
+    "storage1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('serviceConnectorResourceGroupName')]/providers/Microsoft.ServiceLinker/locations/westus/connectors/StorageConnection_EB8D4F83A3, /subscriptions/1fc26761-4765-4fc8-8501-3ad5eceb383a/resourceGroups/rg-raceday/providers/Microsoft.ServiceLinker/locations/westus/connectors/StorageConnection_FD6BB2A574",
+      "secretStore": "LocalSecretsFile",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/racedaystoragest10448051",
+      "type": "storage.azure",
+      "connectionId": "StorageConnection"
+    }
+  }
+}

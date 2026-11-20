@@ -1000,3 +1000,11 @@ C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API.Tests\obj\Debug\net10
 C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API.Tests\obj\Debug\net10.0\RaceDay.API.Tests.pdb
 C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API.Tests\obj\Debug\net10.0\RaceDay.API.Tests.genruntimeconfig.cache
 C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API.Tests\obj\Debug\net10.0\ref\RaceDay.API.Tests.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API.Tests\bin\Debug\net10.0\Apache.Arrow.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API.Tests\bin\Debug\net10.0\Azure.Data.Tables.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API.Tests\bin\Debug\net10.0\Azure.Storage.Blobs.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API.Tests\bin\Debug\net10.0\Azure.Storage.Common.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API.Tests\bin\Debug\net10.0\Azure.Storage.Files.Shares.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API.Tests\bin\Debug\net10.0\Azure.Storage.Queues.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API.Tests\bin\Debug\net10.0\Microsoft.Extensions.Azure.dll
+C:\Users\Luke Cowley\Documents\GitHub\Prog6212\RaceDay.API.Tests\bin\Debug\net10.0\System.IO.Hashing.dll

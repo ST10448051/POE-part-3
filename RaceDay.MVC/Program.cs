@@ -19,7 +19,13 @@ builder.Services.AddHttpClient("RaceDayAPI", client =>
     client.DefaultRequestHeaders.Accept.Add(
         new MediaTypeWithQualityHeaderValue(
             "application/json"));
-});
+})
+.ConfigurePrimaryHttpMessageHandler(() =>
+    new HttpClientHandler
+    {
+        UseCookies = false,
+        AllowAutoRedirect = false
+    });
 
 builder.Services.AddScoped<
     RaceDay.MVC.Services.RaceDayApiService>();

@@ -1,0 +1,140 @@
+﻿@model RaceDay.MVC.Models.EventMediaGalleryViewModel
+
+@{
+    ViewData["Title"] = "Event Media Gallery";
+}
+
+<div class="container py-5">
+
+    <div class="mb-4">
+        <a asp-controller="Events"
+           asp-action="Details"
+           asp-route-id="@Model.EventID"
+           class="text-decoration-none">
+            &larr; Back to Event
+        </a>
+    </div>
+
+    <div class="d-flex justify-content-between
+        align-items-center mb-4">
+
+        <div>
+            <h1 class="fw-bold">Event Media Gallery</h1>
+            <p class="text-muted">@Model.EventName</p>
+        </div>
+
+    </div>
+
+    
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    @if (User.IsInRole("Organiser"))
+    {
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <h4 class="card-title mb-3">
+                    Upload Event Image
+                </h4>
+
+                <form asp-controller="EventMedia"
+                      asp-action="Upload"
+                      method="post"
+                      enctype="multipart/form-data">
+
+                    @Html.AntiForgeryToken()
+
+                    <input type="hidden"
+                           name="eventId"
+                           value="@Model.EventID" />
+
+                    <div class="mb-3">
+                        <label for="file"
+                               class="form-label">
+                            Select Image
+                        </label>
+
+                        <input type="file"
+                               id="file"
+                               name="file"
+                               class="form-control"
+                               accept=".jpg,.jpeg,.png,.webp"
+                               required />
+
+                        <div class="form-text">
+                            JPEG, PNG or WebP.
+                            Maximum file size: 5 MB.
+                        </div>
+                    </div>
+
+                    <button type="submit"
+                            class="btn btn-primary">
+                        Upload Image
+                    </button>
+                </form>
+            </div>
+        </div>
+    }
+
+    @if (!Model.Images.Any())
+    {
+        <div class="alert alert-info">
+            No images have been uploaded for this event yet.
+        </div>
+    }
+    else
+    {
+        <div class="row g-4">
+
+            @foreach (var image in Model.Images)
+            {
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <img src="@Url.Action(
+                                "Image",
+                                "EventMedia",
+                                new
+                                {
+                                    eventId = Model.EventID,
+                                    mediaId = image.EventMediaID
+                                })"
+                             class="card-img-top"
+                             alt="@image.FileName"
+                             loading="lazy"
+                             style="height:220px;object-fit:cover;" />
+
+                        <div class="card-body">
+
+                            <h6 class="fw-bold">
+                                @image.FileName
+                            </h6>
+
+                            <p class="text-muted small mb-0">
+                                Uploaded:
+                                @image.UploadedAt.ToString("dd MMM yyyy")
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            }
+
+        </div>
+    }
+
+</div>

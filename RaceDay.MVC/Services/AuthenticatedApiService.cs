@@ -1,4 +1,4 @@
-﻿
+﻿using Microsoft.AspNetCore.Http;
 using System.Net.Http.Json;
 
 namespace RaceDay.MVC.Services;
@@ -86,5 +86,34 @@ public class AuthenticatedApiService
 
         return await client.SendAsync(request);
     }
+
+    public async Task<HttpResponseMessage> PostFileAsync(
+        string endpoint,
+        IFormFile file)
+    {
+        var client = _factory.CreateClient("RaceDayAPI");
+
+        using var request = new HttpRequestMessage(
+            HttpMethod.Post, endpoint);
+
+        using var form = new MultipartFormDataContent();
+
+        await using var stream = file.OpenReadStream();
+
+        using var fileContent = new StreamContent(stream);
+
+        fileContent.Headers.ContentType =
+            new System.Net.Http.Headers.MediaTypeHeaderValue(
+                file.ContentType);
+
+        form.Add(fileContent, "file", file.FileName);
+
+        request.Content = form;
+
+        AddAuthentication(request);
+
+        return await client.SendAsync(request);
+    }
+
 
 }

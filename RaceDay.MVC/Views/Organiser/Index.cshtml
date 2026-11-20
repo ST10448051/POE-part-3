@@ -1,24 +1,174 @@
-﻿@{
+﻿@model List<RaceDay.MVC.Models.EventViewModel>
+
+@{
     ViewData["Title"] = "Organiser Dashboard";
+
+    var totalEvents = Model.Count;
+    var openEvents = Model.Count(e => e.Status == "Open");
+    var upcomingEvents = Model.Count(e =>
+        e.EventDate.Date >= DateTime.Today);
 }
 
 <div class="container py-5">
-    <h1>Organiser Dashboard</h1>
 
-    <p>Welcome, @User.Identity?.Name!</p>
+    <div class="d-flex justify-content-between
+        align-items-center flex-wrap gap-3 mb-4">
 
-    <div class="alert alert-success">
-        You are logged in as an Organiser.
+        <div>
+            <h1 class="fw-bold">My Events</h1>
+            <p class="text-muted">
+                Manage your races and event registrations.
+            </p>
+        </div>
+
+        <a asp-controller="Events"
+           asp-action="Create"
+           class="btn btn-raceday">
+            + Create Event
+        </a>
     </div>
 
-    <p>
-        Event management, enrolments and results
-        will be available here.
-    </p>
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
 
-    <a asp-controller="Events"
-       asp-action="Create"
-       class="btn btn-raceday">
-        + Create New Event
-    </a>
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    <div class="row g-4 mb-5">
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h6 class="text-muted">Total Events</h6>
+                    <h2 class="fw-bold">@totalEvents</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h6 class="text-muted">Open Events</h6>
+                    <h2 class="fw-bold">@openEvents</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h6 class="text-muted">Upcoming Events</h6>
+                    <h2 class="fw-bold">@upcomingEvents</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card">
+        <div class="card-body p-4">
+
+            <h4 class="fw-bold mb-4">
+                Your Events
+            </h4>
+
+            @if (!Model.Any())
+            {
+                <div class="text-center py-5">
+                    <h5>No events created yet</h5>
+                    <p class="text-muted">
+                        Create your first event to get started.
+                    </p>
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive">
+
+                    <table class="table table-hover align-middle">
+
+                        <thead>
+                            <tr>
+                                <th>Event</th>
+                                <th>Date</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            @foreach (var race in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            @race.EventName
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        @race.EventDate.ToString(
+                                            "dd MMM yyyy")
+                                    </td>
+
+                                    <td>@race.Location</td>
+
+                                    <td>
+                                        <span class="badge bg-secondary">
+                                            @race.Status
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <div class="d-flex gap-2">
+
+                                            <a asp-controller="Events"
+                                               asp-action="Details"
+                                               asp-route-id="@race.EventID"
+                                               class="btn btn-sm
+                                                btn-outline-secondary">
+                                                View
+                                            </a>
+
+                                            <a asp-controller="Events"
+                                               asp-action="Edit"
+                                               asp-route-id="@race.EventID"
+                                               class="btn btn-sm
+                                                btn-outline-primary">
+                                                Edit
+                                            </a>
+
+                                            <a asp-controller="Events"
+                                               asp-action="Delete"
+                                               asp-route-id="@race.EventID"
+                                               class="btn btn-sm
+                                                btn-outline-danger">
+                                                Delete
+                                            </a>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+            }
+
+        </div>
+    </div>
+
 </div>

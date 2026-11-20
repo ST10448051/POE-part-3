@@ -1,0 +1,100 @@
+﻿@model RaceDay.MVC.Models.EditEventCategoryViewModel
+
+@{
+    ViewData["Title"] = "Edit Event Category";
+}
+
+<div class="container py-5">
+
+    <div class="mb-4">
+        <a asp-controller="EventCategories"
+           asp-action="Index"
+           asp-route-eventId="@Model.EventID"
+           class="text-decoration-none">
+            &larr; Back to Event Categories
+        </a>
+    </div>
+
+    <div class="mb-4">
+        <h1 class="fw-bold">Edit Event Category</h1>
+        <p class="text-muted">
+            @Model.CategoryName
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="card-body p-4">
+
+            <form asp-controller="EventCategories"
+                  asp-action="Edit"
+                  asp-route-eventId="@Model.EventID"
+                  asp-route-categoryId="@Model.CategoryID"
+                  method="post">
+
+                @Html.AntiForgeryToken()
+
+                <input asp-for="EventID" type="hidden" />
+                <input asp-for="CategoryID" type="hidden" />
+                <input asp-for="CategoryName" type="hidden" />
+
+                <div asp-validation-summary="ModelOnly"
+                     class="text-danger mb-3"></div>
+
+                <div class="mb-3">
+                    <label asp-for="EntryFee"
+                           class="form-label"></label>
+
+                    <input asp-for="EntryFee"
+                           type="number"
+                           step="0.01"
+                           min="0"
+                           class="form-control" />
+
+                    <span asp-validation-for="EntryFee"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="MaxParticipants"
+                           class="form-label"></label>
+
+                    <input asp-for="MaxParticipants"
+                           type="number"
+                           min="1"
+                           class="form-control"
+                           placeholder="Leave blank for unlimited" />
+
+                    <span asp-validation-for="MaxParticipants"
+                          class="text-danger"></span>
+
+                    <small class="text-muted">
+                        Leave this field empty for unlimited participants.
+                    </small>
+                </div>
+
+                <div class="d-flex gap-2 mt-4">
+
+                    <button type="submit"
+                            class="btn btn-raceday">
+                        Save Changes
+                    </button>
+
+                    <a asp-controller="EventCategories"
+                       asp-action="Index"
+                       asp-route-eventId="@Model.EventID"
+                       class="btn btn-outline-secondary">
+                        Cancel
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

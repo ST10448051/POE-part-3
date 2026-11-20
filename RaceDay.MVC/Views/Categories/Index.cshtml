@@ -1,0 +1,111 @@
+﻿@model List<RaceDay.MVC.Models.CategoryViewModel>
+
+@{
+    ViewData["Title"] = "Race Categories";
+}
+
+<div class="container py-5">
+
+    <div class="d-flex justify-content-between
+        align-items-center mb-4">
+
+        <div>
+            <h1 class="fw-bold">Race Categories</h1>
+            <p class="text-muted">
+                Manage the categories available for events.
+            </p>
+        </div>
+
+        <a asp-action="Create"
+           class="btn btn-raceday">
+            + Add Category
+        </a>
+
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+
+    <div class="card">
+        <div class="card-body p-4">
+
+            @if (!Model.Any())
+            {
+                <div class="text-center py-5">
+                    <h5>No categories found</h5>
+                    <p class="text-muted">
+                        Create your first race category.
+                    </p>
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive">
+
+                    <table class="table table-hover align-middle">
+
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Description</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            @foreach (var category in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            @category.CategoryName
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        @category.Description
+                                    </td>
+
+                                    <td>
+                                        <div class="d-flex gap-2">
+
+                                            <a asp-action="Edit"
+                                               asp-route-id="@category.CategoryID"
+                                               class="btn btn-sm btn-outline-primary">
+                                                Edit
+                                            </a>
+
+                                            <a asp-action="Delete"
+                                               asp-route-id="@category.CategoryID"
+                                               class="btn btn-sm btn-outline-danger">
+                                                Delete
+                                            </a>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+            }
+
+        </div>
+    </div>
+
+</div>

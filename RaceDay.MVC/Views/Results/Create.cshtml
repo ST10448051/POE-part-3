@@ -1,0 +1,175 @@
+﻿@model RaceDay.MVC.Models.CreateResultPageViewModel
+
+@{
+    ViewData["Title"] = "Record Race Result";
+}
+
+<div class="container py-5">
+
+    <div class="mb-4">
+        <a asp-action="Event"
+           asp-route-eventId="@Model.EventID"
+           class="text-decoration-none">
+            &larr; Back to Results
+        </a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body p-4">
+
+            <h2 class="fw-bold mb-2">
+                Record Race Result
+            </h2>
+
+            <p class="text-muted mb-4">
+                @Model.EventName
+            </p>
+
+            <form asp-action="Create" method="post">
+
+                @Html.AntiForgeryToken()
+
+                <input type="hidden"
+                       asp-for="EventID" />
+
+                <div asp-validation-summary="All"
+                     class="text-danger mb-3"></div>
+
+                <div class="mb-3">
+
+                    <label asp-for="Result.EnrolmentID"
+                           class="form-label">
+                        Participant
+                    </label>
+
+                    <select asp-for="Result.EnrolmentID"
+                            asp-items="Model.Participants"
+                            class="form-select">
+
+                        <option value="0">
+                            -- Select Participant --
+                        </option>
+
+                    </select>
+
+                    <span asp-validation-for="Result.EnrolmentID"
+                          class="text-danger"></span>
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label asp-for="Result.ResultStatus"
+                           class="form-label">
+                        Result Status
+                    </label>
+
+                    <select asp-for="Result.ResultStatus"
+                            class="form-select"
+                            id="resultStatus">
+
+                        <option value="Finished">
+                            Finished
+                        </option>
+
+                        <option value="DidNotFinish">
+                            Did Not Finish
+                        </option>
+
+                        <option value="Disqualified">
+                            Disqualified
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div id="finishFields">
+
+                    <div class="mb-3">
+
+                        <label asp-for="Result.FinishTime"
+                               class="form-label">
+                            Finish Time (HH:MM:SS)
+                        </label>
+
+                        <input asp-for="Result.FinishTime"
+                               type="text"
+                               class="form-control"
+                               placeholder="00:42:15" />
+
+                        <span asp-validation-for="Result.FinishTime"
+                              class="text-danger"></span>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label asp-for="Result.Position"
+                               class="form-label">
+                            Finishing Position
+                        </label>
+
+                        <input asp-for="Result.Position"
+                               type="number"
+                               min="1"
+                               class="form-control" />
+
+                        <span asp-validation-for="Result.Position"
+                              class="text-danger"></span>
+
+                    </div>
+
+                </div>
+
+                <div class="d-flex gap-2 mt-4">
+
+                    <button type="submit"
+                            class="btn btn-primary">
+                        Save Result
+                    </button>
+
+                    <a asp-action="Event"
+                       asp-route-eventId="@Model.EventID"
+                       class="btn btn-outline-secondary">
+                        Cancel
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        const statusSelect =
+            document.getElementById("resultStatus");
+
+        const finishFields =
+            document.getElementById("finishFields");
+
+        function updateFinishFields() {
+            const finished =
+                statusSelect.value === "Finished";
+
+            finishFields.style.display =
+                finished ? "block" : "none";
+
+            if (!finished) {
+                document.getElementById("Result_FinishTime").value = "";
+                document.getElementById("Result_Position").value = "";
+            }
+        }
+
+        statusSelect.addEventListener(
+            "change", updateFinishFields);
+
+        updateFinishFields();
+    </script>
+}

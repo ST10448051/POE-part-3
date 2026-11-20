@@ -1,0 +1,214 @@
+﻿@model RaceDay.MVC.Models.EventResultsViewModel
+
+@{
+    ViewData["Title"] = "Race Results";
+    bool isOrganiser = User.IsInRole("Organiser");
+}
+
+<div class="container py-5">
+
+    <div class="mb-4">
+        <a asp-controller="Events"
+           asp-action="Details"
+           asp-route-id="@Model.EventID"
+           class="text-decoration-none">
+            &larr; Back to Event
+        </a>
+    </div>
+
+    <div class="d-flex justify-content-between
+        align-items-center mb-4">
+
+        <div>
+            <h1 class="fw-bold">Race Results</h1>
+            <p class="text-muted">@Model.EventName</p>
+        </div>
+
+        @if (isOrganiser)
+        {
+            <a asp-controller="Results"
+               asp-action="Create"
+               asp-route-eventId="@Model.EventID"
+               class="btn btn-primary">
+                Record Result
+            </a>
+        }
+
+    </div>
+
+    <div class="row g-3 mb-4">
+
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h3>@Model.TotalResults</h3>
+                    <p class="text-muted mb-0">
+                        Total Results
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h3 class="text-success">
+                        @Model.FinishedCount
+                    </h3>
+                    <p class="text-muted mb-0">
+                        Finished
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h3 class="text-warning">
+                        @Model.DidNotFinishCount
+                    </h3>
+                    <p class="text-muted mb-0">
+                        Did Not Finish
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h3 class="text-danger">
+                        @Model.DisqualifiedCount
+                    </h3>
+                    <p class="text-muted mb-0">
+                        Disqualified
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+
+            <h4 class="fw-bold mb-4">
+                Event Leaderboard
+            </h4>
+
+            @if (!Model.Results.Any())
+            {
+                <div class="alert alert-info">
+                    No results have been recorded for this event yet.
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive">
+
+                    <table class="table table-hover align-middle">
+
+                        <thead>
+                            <tr>
+                                <th>Position</th>
+                                <th>Participant</th>
+                                <th>Category</th>
+                                <th>Finish Time</th>
+                                <th>Status</th>
+
+                                @if (isOrganiser)
+                                {
+                                    <th>Actions</th>
+                                }
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            @foreach (var result in Model.Results)
+                            {
+                                <tr>
+
+                                    <td>
+                                        @(result.Position?.ToString() ?? "—")
+                                    </td>
+
+                                    <td>
+                                        @result.ParticipantName
+                                    </td>
+
+                                    <td>
+                                        @result.CategoryName
+                                    </td>
+
+                                    <td>
+                                        @result.DisplayFinishTime
+                                    </td>
+
+                                    <td>
+                                        @if (result.ResultStatus == "Finished")
+                                        {
+                                            <span class="badge bg-success">
+                                                Finished
+                                            </span>
+                                        }
+                                        else if (result.ResultStatus == "DidNotFinish")
+                                        {
+                                            <span class="badge bg-warning text-dark">
+                                                DNF
+                                            </span>
+                                        }
+                                        else if (result.ResultStatus == "Disqualified")
+                                        {
+                                            <span class="badge bg-danger">
+                                                Disqualified
+                                            </span>
+                                        }
+                                    </td>
+
+                                    @if (isOrganiser)
+                                    {
+                                        <td>
+                                            <div class="d-flex gap-2">
+
+                                                <a asp-action="Edit"
+                                                   asp-route-id="@result.ResultID"
+                                                   asp-route-eventId="@Model.EventID"
+                                                   class="btn btn-sm btn-outline-primary">
+                                                    Edit
+                                                </a>
+
+                                                <form asp-action="Delete"
+                                                      asp-route-id="@result.ResultID"
+                                                      asp-route-eventId="@Model.EventID"
+                                                      method="post"
+                                                      onsubmit="return confirm('Delete this result?');">
+
+                                                    @Html.AntiForgeryToken()
+
+                                                    <button type="submit"
+                                                            class="btn btn-sm btn-outline-danger">
+                                                        Delete
+                                                    </button>
+
+                                                </form>
+
+                                            </div>
+                                        </td>
+                                    }
+
+                                </tr>
+                            }
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+            }
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,168 @@
+﻿@model RaceDay.MVC.Models.EventParticipantsViewModel
+
+@{
+    ViewData["Title"] = "Event Participants";
+}
+
+<div class="container py-5">
+
+    <div class="mb-4">
+        <a asp-controller="Organiser"
+           asp-action="Index"
+           class="text-decoration-none">
+            &larr; Back to My Events
+        </a>
+    </div>
+
+    <div class="mb-4">
+        <h1 class="fw-bold">Event Participants</h1>
+        <p class="text-muted">@Model.EventName</p>
+    </div>
+
+    <div class="row g-3 mb-4">
+
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h3 class="fw-bold">@Model.TotalEnrolments</h3>
+                    <p class="text-muted mb-0">Total Enrolments</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h3 class="fw-bold text-success">
+                        @Model.Confirmed
+                    </h3>
+                    <p class="text-muted mb-0">Confirmed</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h3 class="fw-bold text-warning">
+                        @Model.Pending
+                    </h3>
+                    <p class="text-muted mb-0">Pending</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h3 class="fw-bold text-danger">
+                        @Model.Cancelled
+                    </h3>
+                    <p class="text-muted mb-0">Cancelled</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card">
+        <div class="card-body p-4">
+
+            <h4 class="fw-bold mb-4">
+                Registered Participants
+            </h4>
+
+            @if (!Model.Participants.Any())
+            {
+                <div class="alert alert-info">
+                    No participants have registered for this event yet.
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive">
+
+                    <table class="table table-hover align-middle">
+
+                        <thead>
+                            <tr>
+                                <th>Participant</th>
+                                <th>Email</th>
+                                <th>Category</th>
+                                <th>Enrolment Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            @foreach (var participant in Model.Participants)
+                            {
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            @participant.FullName
+                                        </strong>
+                                    </td>
+
+                                    <td>
+                                        @participant.Email
+                                    </td>
+
+                                    <td>
+                                        @participant.CategoryName
+                                    </td>
+
+                                    <td>
+                                        @participant.EnrolmentDate
+                                        .ToString("dd MMM yyyy")
+                                    </td>
+
+                                    <td>
+                                        @if (participant.Status == "Confirmed")
+                                        {
+                                            <span class="badge bg-success">
+                                                Confirmed
+                                            </span>
+                                        }
+                                        else if (participant.Status == "Pending")
+                                        {
+                                            <span class="badge bg-warning text-dark">
+                                                Pending
+                                            </span>
+                                        }
+                                        else if (participant.Status == "Cancelled")
+                                        {
+                                            <span class="badge bg-danger">
+                                                Cancelled
+                                            </span>
+                                        }
+                                        else if (participant.Status == "Completed")
+                                        {
+                                            <span class="badge bg-primary">
+                                                Completed
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-secondary">
+                                                @participant.Status
+                                            </span>
+                                        }
+                                    </td>
+
+                                </tr>
+                            }
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+            }
+
+        </div>
+    </div>
+
+</div>

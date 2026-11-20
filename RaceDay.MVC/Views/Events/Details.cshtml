@@ -110,14 +110,24 @@
 
                     @if (Model.Status == "Open")
                     {
-                        @if (User.Identity?.IsAuthenticated == true
-                            && User.IsInRole("Participant"))
+                        @if (User.Identity?.IsAuthenticated == true &&
+                             User.IsInRole("Participant") &&
+                             Model.Status == "Open")
                         {
                             <a asp-controller="Enrolments"
                                asp-action="Create"
                                asp-route-eventId="@Model.EventID"
-                               class="btn btn-raceday w-100">
+                               class="btn btn-raceday">
                                 Enrol Now
+                            </a>
+                        }
+                        else if (User.Identity?.IsAuthenticated != true &&
+                                 Model.Status == "Open")
+                        {
+                            <a asp-controller="Account"
+                               asp-action="Login"
+                               class="btn btn-raceday">
+                                Log In to Enrol
                             </a>
                         }
                         else if (User.Identity?.IsAuthenticated != true)

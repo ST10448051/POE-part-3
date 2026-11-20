@@ -1,0 +1,117 @@
+﻿@model RaceDay.MVC.Models.CreateEnrolmentViewModel
+
+@{
+    ViewData["Title"] = "Enrol in Event";
+}
+
+<div class="container py-5">
+
+    <div class="mb-4">
+        <a asp-controller="Events"
+           asp-action="Details"
+           asp-route-id="@Model.EventID"
+           class="text-decoration-none">
+            &larr; Back to Event
+        </a>
+    </div>
+
+    <div class="mb-4">
+        <h1 class="fw-bold">Enrol in Event</h1>
+        <p class="text-muted">@Model.EventName</p>
+    </div>
+
+    <div class="card">
+        <div class="card-body p-4">
+
+            <h4 class="fw-bold mb-4">
+                Select Your Race Category
+            </h4>
+
+            @if (!Model.Categories.Any())
+            {
+                <div class="alert alert-info">
+                    No race categories are currently available
+                    for this event.
+                </div>
+            }
+            else
+            {
+                <form asp-controller="Enrolments"
+                      asp-action="Create"
+                      method="post">
+
+                    @Html.AntiForgeryToken()
+
+                    <input asp-for="EventID" type="hidden" />
+
+                    <div asp-validation-summary="ModelOnly"
+                         class="text-danger mb-3"></div>
+
+                    @foreach (var category in Model.Categories)
+                    {
+                        <div class="border rounded p-3 mb-3">
+
+                            <div class="form-check">
+
+                                <input class="form-check-input"
+                                       type="radio"
+                                       asp-for="EventCategoryID"
+                                       value="@category.EventCategoryID"
+                                       id="category-@category.EventCategoryID" />
+
+                                <label class="form-check-label w-100"
+                                       for="category-@category.EventCategoryID">
+
+                                    <div class="d-flex justify-content-between">
+
+                                        <strong>
+                                            @category.CategoryName
+                                        </strong>
+
+                                        <strong>
+                                            R @category.EntryFee.ToString("N2")
+                                        </strong>
+
+                                    </div>
+
+                                    <p class="text-muted small mb-1">
+                                        @category.Description
+                                    </p>
+
+                                    <small class="text-muted">
+                                        Maximum participants:
+                                        @(category.MaxParticipants?.ToString()
+                                            ?? "Unlimited")
+                                    </small>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+                    }
+
+                    <span asp-validation-for="EventCategoryID"
+                          class="text-danger"></span>
+
+                    <div class="alert alert-info mt-3">
+                        Your enrolment will be confirmed immediately
+                        if the selected category has availability.
+                    </div>
+
+                    <button type="submit"
+                            class="btn btn-raceday mt-3">
+                        Confirm Enrolment
+                    </button>
+
+                </form>
+            }
+
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
